@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+h5{
+  font-family: 'Concert One', Arial, Helvetica, sans-serif;
+}
+a{
+  color: black;
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+a:hover{
+  color: #E9541F;
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}

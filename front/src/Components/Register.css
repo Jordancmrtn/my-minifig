@@ -1,0 +1,27 @@
+.cardLogin{
+  width: 90%;
+  border-radius: 10px;
+}
+.btn-primary:disabled{
+  background-color: #E9541F;
+  border-color: #E9541F;
+}
+
+.btn-primary{
+  background-color: #E9541F;
+  border-color: #E9541F;
+}
+.btn-primary:hover{
+  background-color: rgb(204, 69, 19);
+  border-color: rgb(204, 69, 19);
+}
+
+@media screen and (min-width: 376px){
+  .cardLogin{
+    width: 40%;
+  }
+  .test{
+    width: 40%;
+  }
+}
+

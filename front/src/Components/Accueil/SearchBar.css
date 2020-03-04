@@ -1,0 +1,21 @@
+.searchBar{
+  width: 70%;
+  margin: 0 auto;
+}
+.input-group-text{
+  background-color: rgb(250, 110, 59);
+}
+.container{
+  width: 100%;
+  padding: 15px 15px 0px 15px;
+  background-color: #EEEEEE;
+}
+.cardSearch{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+h5{
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}

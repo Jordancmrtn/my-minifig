@@ -1,0 +1,49 @@
+.cardBienvenue{
+  width: 88%;
+  border-radius: 10px;
+  padding: 7%;
+  margin: 7% auto;
+  background-color: #EEEEEE;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.link{
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  width: fit-content;
+  background-color: #E9541F;
+  padding: 5%;
+  border-radius: 10px;
+  color: white;
+  margin: 0 auto;
+}
+.link:hover{
+  background-color:rgb(204, 69, 19);
+  color:white;
+}
+.linkConnection{
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  width: fit-content;
+  padding: 0;
+  margin: 0 auto;
+  text-decoration: none !important;
+  outline: none;
+}
+#logoLego{
+  height: auto;
+  width: 23%;
+}
+
+@media screen and (min-width: 376px){
+  .cardBienvenue{
+    padding: 3%;
+    margin: 3% auto;
+  }
+  #logoLego{
+    width: 10%;
+  }
+  .link{
+    padding: 2% 5%;
+  }
+}
