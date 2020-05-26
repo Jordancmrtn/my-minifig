@@ -7,8 +7,6 @@ const Header = () => {
 
   const user = useContext(CtxUser);
   
-  console.log(user)
-
   return (
     <div className="title">
       <Link to='/'><h1 >MY MINIFIG</h1></Link>
