@@ -5,7 +5,7 @@ import CtxCollection from '../CtxCollection';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const Profile = () => {
+const Profil = () => {
 
     const user = useContext(CtxUser);
     const collection = useContext(CtxCollection)
@@ -21,6 +21,7 @@ const Profile = () => {
     const handleDeconnection = () => {
       localStorage.removeItem('token');
     }
+    
   return(
     <>
       <Headers />
@@ -47,4 +48,4 @@ const Profile = () => {
   )
 }
 
-export default Profile;
+export default Profil;

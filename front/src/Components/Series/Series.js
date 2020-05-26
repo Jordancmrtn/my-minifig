@@ -29,13 +29,11 @@ const Series = () => {
                   <p className="card-text year">{minifig.year}</p>
                   <div className="form-check">
                     <input type="checkbox" 
-                    
                     onClick={ () => {
                       myFigs.push(minifig.title)
                       localStorage.setItem('MyMinifigs', myFigs)
                       console.log(myFigs)
                     }}
-
                     className="form-check-input" id="exampleCheck1" />
                     <label className="form-check-label" htmlFor="exampleCheck1">Je l'ai</label>
                   </div>
