@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css'
 
-
 function NavBar() {
   //They are arranged in order of exit. From most recent to oldest
   return (

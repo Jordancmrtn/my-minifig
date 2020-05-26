@@ -32,25 +32,24 @@ const Login = () => {
     <>
       <Header />
       <div className="d-flex justify-content-center align-items-center flex-column">
-      { user.email ? <Redirect to="/profil" /> : null }
-      <div className="container cardLogin pb-3 mt-5">
-      <h5>Connecte-toi !</h5>
-      <div className="form-group">
-        <input type="text" 
-        value={form.email}
-        onChange={ (event) => setForm({...form, email : event.target.value}) }
-        className="form-control" id="inputNom" placeholder="exemple@gmail.com" />
-      </div>
-      <div className="form-group">
-        <input type="password" 
-        value={form.password} 
-        onChange={ (event) => setForm({...form, password : event.target.value}) }
-        className="form-control" id="inputPrenom" placeholder="Mot de passe" />
-      </div>
-      <Link to='/profil' type="submit" className="btn btn-primary" onClick={submitForm} >Se connecter</Link>
-      </div>
-
-      <Link className="mt-3" to='/'>Retour à l'accueil</Link>
+        { user.email ? <Redirect to="/profil" /> : null }
+        <div className="container cardLogin pb-3 mt-5">
+          <h5>Connecte-toi !</h5>
+          <div className="form-group">
+            <input type="text" 
+            value={form.email}
+            onChange={ (event) => setForm({...form, email : event.target.value}) }
+            className="form-control" id="inputNom" placeholder="exemple@gmail.com" />
+          </div>
+          <div className="form-group">
+            <input type="password" 
+            value={form.password} 
+            onChange={ (event) => setForm({...form, password : event.target.value}) }
+            className="form-control" id="inputPrenom" placeholder="Mot de passe" />
+          </div>
+          <Link to='/profil' type="submit" className="btn btn-primary" onClick={submitForm} >Se connecter</Link>
+        </div>
+        <Link className="mt-3" to='/'>Retour à l'accueil</Link>
       </div>
     </>
   )

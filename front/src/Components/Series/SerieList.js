@@ -8,7 +8,6 @@ import CtxUser from '../../CtxUser';
 import CtxCollection from '../../CtxCollection';
 import Loading from '../Loading';
 
-
 const SerieList = (props) => {
 
   const user = useContext(CtxUser);
@@ -60,6 +59,7 @@ const SerieList = (props) => {
     setLoading(!loading)
   }
 
+  //J'ajoute à ma collection personelle
   const handleAdded = (e, index, minifig) => {
 
     axios.post(`http://localhost:8000/collection?user=${user.id}&serieid=${minifig.id}`)
@@ -69,6 +69,7 @@ const SerieList = (props) => {
     setTest(!test)
   }
 
+  //Je supprime de la collection personelle
   const handleRemove = (e, index, minifig) => {
 
     axios.delete(`http://localhost:8000/collection?user=${user.id}&serieid=${minifig.id}`)
@@ -76,7 +77,6 @@ const SerieList = (props) => {
       console.log(response)
     })
   }
-
 
   return (
     <>
@@ -91,15 +91,15 @@ const SerieList = (props) => {
           serie.map((minifig, index) => {
             return (
               <div className="card divCard" style={{ width: 169 + "px" }} key={index}>
-                  <img src={minifig.img_url} className="card-img-top imgMinifig" alt={minifig.title} style={{ margin: 10 + "%" + 0 + "%" + 2 + "%" + 0 + "%" }} />
-                  <p className="card-text name">{minifig.title}</p>
-                  <p className="card-text year">{minifig.year}</p>
-                  {
-                  (collection.find(test => test.title === minifig.title) !== undefined) ? 
-                    <button type="button" key={index} className="btn btn-danger mt-3 mb-3" onClick={(e) => handleRemove(e, index, minifig)}>Je retire de ma collection</button>
-                    :
-                    <button type="button" key={index} className="btn btn-warning mt-3 mb-3" onClick={(e) => handleAdded(e, index, minifig)}>J'ajoute à ma collection</button>
-                  } 
+                <img src={minifig.img_url} className="card-img-top imgMinifig" alt={minifig.title} style={{ margin: 10 + "%" + 0 + "%" + 2 + "%" + 0 + "%" }} />
+                <p className="card-text name">{minifig.title}</p>
+                <p className="card-text year">{minifig.year}</p>
+                {
+                (collection.find(test => test.title === minifig.title) !== undefined) ? 
+                  <button type="button" key={index} className="btn btn-danger mt-3 mb-3" onClick={(e) => handleRemove(e, index, minifig)}>Je retire de ma collection</button>
+                  :
+                  <button type="button" key={index} className="btn btn-warning mt-3 mb-3" onClick={(e) => handleAdded(e, index, minifig)}>J'ajoute à ma collection</button>
+                } 
               </div>
             )
           })

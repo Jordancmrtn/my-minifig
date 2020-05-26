@@ -4,12 +4,10 @@ import './CardBienvenue.css';
 import { Link } from 'react-router-dom';
 import CtxUser from '../../CtxUser';
 
-
 const CardBienvenue = () => {
 
   const serie = useContext(CtxSerie);
   const user = useContext(CtxUser);
-
 
   return (
     <div className="cardBienvenue">
@@ -19,7 +17,6 @@ const CardBienvenue = () => {
       <p>Il y a <b>{serie.length} minifigs</b> de référencées sur MyMinifig !</p>
       <p>Le site est totalement <b>GRATUIT</b></p>
       {user.firstname != null ? "" : <Link className="link" to='/register'>Je m'inscris</Link> }
-      
     </div>
   )
 }
