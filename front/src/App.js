@@ -43,7 +43,6 @@ function App() {
         if(err){
           console.log(err);
         }
-        console.log(response)
         setUser(response.data)
         // console.log(user);
       })
