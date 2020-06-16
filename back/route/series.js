@@ -42,6 +42,7 @@ seriesRouter.get('/', function(req, res) {
 })
 
 seriesRouter.get('/:id', function(req, res) {
+  console.log(req.params.id)
   database.query(`SELECT * FROM series WHERE serie = "${req.params.id}"`, (error, result) => {
     if(error) { res.sendStatus(400) };
     res.send(result)

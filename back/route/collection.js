@@ -54,7 +54,6 @@ collectionRouter.get('/', function(req, res) {
 
   const {user} = req.query;
 
-  console.log(user)
   database.query(`SELECT img_url, title, year, serie, firstname, lastname, series.id 
                   FROM collection, series, users WHERE collection.id_user = "${user}"
                   AND collection.id_serie = series.id ORDER BY year DESC`, function(err, rows) {
